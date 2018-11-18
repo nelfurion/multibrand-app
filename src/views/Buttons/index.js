@@ -1,4 +1,4 @@
-import BrandedButton from '@/components/BrandedButton'
+import BrandedButton from '@/components/BrandedButton/BrandedButton'
 
 export default {
   name: 'buttons',

@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script src="@/components/DHeader"></script>
+<script src="../"></script>
 
 <style scoped>
  .header {

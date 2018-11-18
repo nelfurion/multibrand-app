@@ -13,7 +13,7 @@
 
 <script>
 
-import DynamicComponent from '@/components/DynamicComponent'
+import DynamicComponent from '@/components/DynamicComponent/DynamicComponent'
 
 export default {
   name: 'app',

@@ -19,7 +19,7 @@ export default {
     loader () {
       // eslint-disable-next-line
       console.log(`${this.name} component loaded dynamically for ${this.brand}`)
-      return () => import(`@/components/D${this.name}/${this.brand}`)
+      return () => import(`./D${this.name}/${this.brand}`)
     }
   },
   mounted () {
@@ -28,7 +28,7 @@ export default {
         this.component = () => this.loader()
       })
       .catch(() => {
-        this.component = () => import(`@/components/D${this.name}/brand1`)
+        this.component = () => import(`./D${this.name}/brand1`)
       })
   }
 }
