@@ -5,5 +5,10 @@ import DynamicComponent from './DynamicComponent.vue'
 
 Vue.component('DynamicComponent', DynamicComponent)
 
+const storyConfig = (template) => ({
+  componets: { DynamicComponent },
+  template
+})
+
 storiesOf('DynamicComponent', module)
-  .add('story as a template', () => '<dynamic-component name="Header" />')
+  .add('story as a template', () => storyConfig('<dynamic-component name="Header" />'))

@@ -1,8 +1,14 @@
 export default {
   name: 'StripedTable',
   props: {
-    headers: Array,
-    rows: Array
+    headers: {
+      type: Array,
+      default: null
+    },
+    rows: {
+      type: Array,
+      default: null
+    }
   },
   data: () => ({
     brand: process.env.VUE_APP_BRAND
