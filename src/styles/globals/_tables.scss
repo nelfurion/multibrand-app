@@ -1,0 +1,9 @@
+@mixin rows-striped($color_even, $color_odd) {
+  & tr:nth-child(even) {
+    background-color: $color_even;
+  }
+
+  & tr:nth-child(odd) {
+    background-color: $color_odd;
+  }
+}

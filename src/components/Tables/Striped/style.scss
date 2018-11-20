@@ -1,0 +1,3 @@
+table tbody {
+  @include rows-striped($table-row-color-even, $table-row-color-odd);
+}

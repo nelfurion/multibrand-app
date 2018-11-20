@@ -2,12 +2,22 @@ const path = require("path");
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
+function resolve(...dirs) {
+  return path.join(__dirname, '..', ...dirs);
+}
+
 module.exports = {
+  resolve: {
+    alias: {
+       '@': resolve('src'),
+       '~': resolve('src', 'components'),
+    }
+  },
   module: {
     rules: [
       {
         test: /\.(scss|css)$/,
-        include: path.resolve(__dirname, "../src/"),
+        //include: path.resolve(__dirname, "../src/"),
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },

@@ -1,0 +1,11 @@
+table tbody tr {
+  &:hover {
+    &:nth-child(even) {
+      background-color: $table-row-color-even;
+    }
+
+    &:nth-child(odd) {
+      background-color: $table-row-color-odd;
+    }
+  }
+}
