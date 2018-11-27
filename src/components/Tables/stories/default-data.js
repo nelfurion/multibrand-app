@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   headers: ['Id', 'Header 1', 'Header 2', 'Header 3'],
   rows: [
     [1, 'Lorem', 'ipsum', 'dolor'],

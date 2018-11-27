@@ -3,6 +3,7 @@ import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
 import { addDecorator } from '@storybook/vue'
 import BrandedButton from './BrandedButton.vue'
+import template from './decorator.html'
 
 Vue.component('BrandedButton', BrandedButton)
 
@@ -12,9 +13,9 @@ const storyConfig = (template) => ({
 })
 
 addDecorator(() => ({
-  template: '<div style="textAlign: center"><story/></div>'
+  template
 }))
 
 storiesOf('BrandedButton', module)
-  .add('BrandedButton primary', () => storyConfig('<BrandedButton type="primary" />'))
+  .add('BrandedB  utton primary', () => storyConfig('<BrandedButton type="primary" />'))
   .add('BrandedButton secondary', () => storyConfig('<BrandedButton type="secondary" />'))

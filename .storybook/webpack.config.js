@@ -16,6 +16,11 @@ module.exports = {
   module: {
     rules: [
       {
+            test: /decorator\.html$/,
+            exclude: /node_modules/,
+            use: {loader: 'html-loader'}
+      },
+      {
         test: /\.(scss|css)$/,
         //include: path.resolve(__dirname, "../src/"),
         use: [

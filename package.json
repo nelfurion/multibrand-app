@@ -6,10 +6,13 @@
     "serve": "vue-cli-service serve --host 0.0.0.0",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook:brand1": "STORYBOOK_VUE_APP_BRAND=brand1 VUE_APP_BRAND=brand1 start-storybook -p 9001 -c .storybook",
+    "storybook:brand2": "STORYBOOK_VUE_APP_BRAND=brand2 VUE_APP_BRAND=brand2 start-storybook -p 9002 -c .storybook",
+    "storybook:all": "npm run storybook:brand1 | npm run storybook:brand2"
   },
   "dependencies": {
     "@storybook/addon-options": "^4.0.8",
+    "@storybook/addon-viewport": "^4.0.9",
     "html-loader": "^0.5.5",
     "vue": "^2.5.17"
   },
