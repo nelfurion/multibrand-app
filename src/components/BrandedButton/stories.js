@@ -4,10 +4,6 @@ import { storiesOf } from '@storybook/vue'
 import { addDecorator } from '@storybook/vue'
 import BrandedButton from './BrandedButton.vue'
 
-process.env.asd = '@/components/BrandedButton'
-import '@/stories-styles/brand1.scss'
-
-
 Vue.component('BrandedButton', BrandedButton)
 
 const storyConfig = (template) => ({
