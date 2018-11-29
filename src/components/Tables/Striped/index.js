@@ -8,9 +8,10 @@ export default {
     rows: {
       type: Array,
       default: null
+    },
+    brand: {
+      default: process.env.VUE_APP_BRAND,
+      type: String
     }
-  },
-  data: () => ({
-    brand: process.env.VUE_APP_BRAND
-  })
+  }
 }

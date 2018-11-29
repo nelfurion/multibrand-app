@@ -1,14 +1,17 @@
 {
   "name": "multibrand-app",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --host 0.0.0.0",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook:brand1": "STORYBOOK_VUE_APP_BRAND=brand1 VUE_APP_BRAND=brand1 start-storybook -p 9001 -c .storybook",
     "storybook:brand2": "STORYBOOK_VUE_APP_BRAND=brand2 VUE_APP_BRAND=brand2 start-storybook -p 9002 -c .storybook",
-    "storybook:all": "npm run storybook:brand1 | npm run storybook:brand2"
+    "storybook:all": "npm run storybook:brand1 | npm run storybook:brand2",
+
+    "jest:integration": "jest -c integration/jest.config.js",
+    "test:integration": "VUE_APP_BRAND=brand2 start-server-and-test storybook http-get://localhost:9009 jest:integration",
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "dependencies": {
     "@storybook/addon-options": "^4.0.8",
@@ -28,8 +31,13 @@
     "babel-preset-vue": "^2.0.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "jest": "^23.6.0",
+    "jest-image-snapshot": "^2.7.0",
+    "jest-puppeteer": "^3.5.2",
     "node-sass": "^4.9.0",
+    "puppeteer": "^1.10.0",
     "sass-loader": "^7.0.1",
+    "start-server-and-test": "^1.7.11",
     "storybook-addon-vue-info": "^0.7.0",
     "vue-loader": "^15.4.2",
     "vue-router": "^3.0.1",

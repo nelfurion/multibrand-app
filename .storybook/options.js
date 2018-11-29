@@ -43,7 +43,7 @@ export const options = {
    *   /\/|\./ - split by `/` or `.`
    * @type {Regex}
    */
-  hierarchySeparator: null,
+  // hierarchySeparator: null,
   /**
    * regex for finding the hierarchy root separator
    * @example:
@@ -51,7 +51,7 @@ export const options = {
    *   /\|/ - split by `|`
    * @type {Regex}
    */
-  hierarchyRootSeparator: null,
+  // hierarchyRootSeparator: null,
   /**
    * sidebar tree animations
    * @type {Boolean}

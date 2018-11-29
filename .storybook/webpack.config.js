@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-            test: /decorator\.html$/,
+            test: /story\.html$/,
             exclude: /node_modules/,
             use: {loader: 'html-loader'}
       },
